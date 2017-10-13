@@ -1,1 +1,66 @@
+#include <algorithm>
+#include <iostream>
+#include <cmath>
+#include <random>
+#include <string>
+#include <vector>
 
+template<class T>
+std::vector<T> generate_random_vector(std::size_t num, T min = -20, T max = 20)
+{
+    std::random_device rd;
+    std::mt19937 e2(rd());
+    std::uniform_real_distribution<T> dist(min, max);
+
+    auto lambda = [&e2, &dist] () { return dist(e2); };
+
+    std::vector<T> result(num);
+    std::generate_n(result.begin(), num, lambda);
+    return result;
+}
+
+int main() {
+    std::vector<int> v = generate_random_vector<int>(10, -20, 20);
+    int min:=0;
+    int temp = 0;
+    for (int i = 0; i < v.size; ++i ){
+        for (int j = i + 1; j < v.size; ++i) {
+            if (v[i] < a[min]) {
+                min:=i;
+            }
+        }    
+        temp:=v[min];
+        v[min]:=v[i];
+        v[i]:=temp;
+    }
+    for (int i = 0; i < v.size; ++i) {
+        std::cout << v[i] << " ";
+    }
+    min = 0;
+    std::vector<int> v2 = generate_random_vector<int>(10, -20, 20);
+    for (int i = 0; i < v.size; ++i ){
+        for (int j = i + 1; j < v2.size; ++i) {
+            if (v[i] < a[min]) {
+                min:=i;
+            }
+        }    
+        temp:=v[min];
+        v[min]:=v[i];
+        v[i]:=temp;
+    }
+    for (int i = 0; i < 10; ++i) {
+        std::cout << v[i] << " ";
+    }
+    std::vector<int> vAll = generate_random_vector<int>(20, -20, 20);
+    temp =0;
+    for(int i = 0; i < vAll.size; ++i) {
+        if ((i >= 0) && (i < (vAll.size / 2))) {
+            vAll[temp++] = v[i];
+        } else {
+            c[temp++] = b[i];
+        }
+    }
+    for (int i = 0; i < 10; ++i) {
+        std::cout << v[i] << " ";
+    
+}

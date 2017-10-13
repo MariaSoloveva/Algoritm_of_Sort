@@ -1,12 +1,16 @@
-cmake_minimum_required (VERSION 2.8) 
+cmake_minimum_required (VERSION 2.8)
 
-include_directories(SYSTEM 
-./ 
-) 
+include_directories(SYSTEM
+    ./
+)
 
-# enum your files 
-add_executable(executable 
-REp3.cpp
-) 
+ADD_DEFINITIONS(
+    -std=c++11
+)
+
+# enum your files
+add_executable(executable
+    AlgoritmOfSort.cpp
+)
 
 target_link_libraries(executable)

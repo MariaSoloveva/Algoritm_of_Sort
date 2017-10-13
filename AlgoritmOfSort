@@ -75,9 +75,9 @@ int main() {
             x +=1;
             z += 1;
         }
-        if (y == &&&& )
+        if (y == /// )
         {
-            for (int i = x; i < .....; ++i)
+            for (int i = x; i < v1.size(); ++i)
             {
                 std::cout << v[i] << " ";
                 vAll[z] = v[i];
@@ -86,14 +86,14 @@ int main() {
         }
         if (x == ...)
         {
-            for (int i = y; i < ///; ++i)
+            for (int i = y; i < v2.size(); ++i)
             {
                 std::cout << v2[i] << " ";
                 vAll[z] = v2[i];
                 z += 1;
             }
         }
-    } while ((x < ) && (y < ));
+    } while ((x < v.size()) && (y < v2.size()));
     std::cout << std::endl;
     for (int i = 0; i < ; ++i)
     {
